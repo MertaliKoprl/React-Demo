@@ -1,18 +1,18 @@
 ## Author : Mertali Köprülü
 
 # Photo Search App
-Unsplash photo search and filter demo app. 
+Demo for Unsplash API, photo search and filter app. 
 
 # Done
 --INITIALIZATION--
 
-Introduction to React
+*Introduction to React
 
-Build React Project
+*Build React Project
 
-Create Mock-Up
+*Create Mock-Up
 
-Use Postman to understand required structure for Unsplash-- (Research show that no need for Reach Route because unsplash has its own service)
+*Use Postman to understand required structure for Unsplash-- (Research show that no need for Reach Route because unsplash has its own service)
 
 ------------------
 --EVALUATION--
