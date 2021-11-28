@@ -4,7 +4,7 @@ import logo from '../styles/unsplash-icon.PNG';
 
 function Detail(props) {
 
-    console.log(props.location.state)
+    //console.log(props.location.state)
     const pic = props.location.state.image
     const picDescrip= pic.alt_description;
     var logoUrl = "https://unsplash.com/s/photos/" + picDescrip;

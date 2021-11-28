@@ -27,7 +27,7 @@ export default function SearchPhotos() {
         setPics(json.results);
         hasContend = hasJson();
       });
-    console.log("Heyyo")
+    //console.log("Heyyo")
 
   };
 
@@ -35,7 +35,7 @@ export default function SearchPhotos() {
     try {
       JSON.parse(data);
     } catch (e) {
-      console.log("I am here")
+     // console.log("I am here")
       hasContend = false;
     }
     hasContend = true;
