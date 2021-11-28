@@ -17,9 +17,28 @@
 
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1350px;
     padding: 25px;
 }
+.containner {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .containner img {vertical-align: middle;}
+  
+  .containner .content {
+    position: absolute;
+    bottom: 0rem;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    font-size:1.5rem;
+    text-align:center;
+    width: 98%;
+    padding: 20px;
+  }
 
 .title {
     margin-left:auto;
@@ -80,9 +99,9 @@ flex-direction: column;
 }
 
 .card {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
@@ -107,9 +126,11 @@ div.card-detail h1{
     font-size: 2rem;
 }
 div.bioField h1{
-text-align:center;
+text-align:left;
+
 
 }
+
 
 .card-list {
     column-count: 3;

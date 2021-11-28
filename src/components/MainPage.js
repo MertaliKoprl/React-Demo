@@ -1,9 +1,7 @@
 import React, { createContext, useState } from "react";
 import Unsplash, { toJson } from "unsplash-js";
-import { Redirect } from "react-router";
 import { Link } from "react-router-dom";
-import Detail from "./Detail";
-import { render } from "@testing-library/react";
+
 
 
 const unsplash = new Unsplash({
@@ -95,7 +93,9 @@ export default function SearchPhotos() {
           }
         }).map((pic) => (
           <div className="card" key={pic.id} >
-            <Link to={{pathname: "/details", state: { image: pic}}} >
+            <div className="containner">
+            <div class="content">{pic.user.username}</div>
+            <Link to={{ pathname: "/details", state: { image: pic } }} >
               <img
                 className="card--image"
                 alt={pic.alt_description}
@@ -105,13 +105,15 @@ export default function SearchPhotos() {
 
               ></img>
             </Link>
+            
+            </div>
           </div>
-      ))
+        ))
 
       }
 
-      {" "}
-    </div>
+        {" "}
+      </div>
     </>
   );
 }

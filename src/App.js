@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import SearchPhotos from "./components/searchPhotos"
+import MainPage from "./components/MainPage"
 import Detail from './components/Detail';
 import { BrowserRouter, Route } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ function App() {
 
         <h1 className="title">Unsplash Photo Display Demo </h1>
         <BrowserRouter>
-            <Route path="/" exact component={SearchPhotos} />
+            <Route path="/" exact component={MainPage} />
             <Route path="/details" exact component={Detail} />
         </BrowserRouter>
       </div>
