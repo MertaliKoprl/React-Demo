@@ -17,8 +17,8 @@
 
 .container {
     margin: 0 auto;
-    max-width: 1000px;
-    padding: 40px;
+    max-width: 1200px;
+    padding: 25px;
 }
 
 .title {
@@ -82,17 +82,44 @@ flex-direction: column;
 .card {
     margin-bottom: 1rem;
     display: flex;
+    justify-content: space-around;
 }
+
 
 .card--image {
     flex: 100%;
     margin-top: 1rem;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+
+.card-detail{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    margin:auto;
+}
+
+div.card-detail h1{
+    text-align: left;
+    margin-left:5rem;
+    margin-right:auto;
+    font-size: 2rem;
+}
+div.bioField h1{
+text-align:center;
+
 }
 
 .card-list {
     column-count: 3;
 }
+.card--list {
+    background-color: #f1f1f1;
+    width: 100%;
+   
+}
+
 
 @media (min-width: 768px) {
     .form {

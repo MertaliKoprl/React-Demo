@@ -1,17 +1,21 @@
 import React, { createContext, useState } from "react";
-import { findRenderedDOMComponentWithClass } from "react-dom/test-utils";
 import Unsplash, { toJson } from "unsplash-js";
+import { Redirect } from "react-router";
+import { Link } from "react-router-dom";
+import Detail from "./Detail";
+import { render } from "@testing-library/react";
 
 
 const unsplash = new Unsplash({
   accessKey: "ClEdGosBLzPLW-tdH6FXnQXwJ6nijpRFv93teQ4sBs8",  // Access key is demo, therefore limited with 50 request per hour
 });
 
+
+
 export default function SearchPhotos() {
   var hasContend = false;
   const [query, setQuery] = useState("");
   const [pics, setPics] = useState([]);
-  const PictureContext = createContext();
 
   const [filtInput, setFilter] = useState("");
 
@@ -29,17 +33,6 @@ export default function SearchPhotos() {
 
   };
 
-  function goDetails(picID) { 
-    var pic = pics.filter((val) => {   // GETS PIC WHICH HAS BEEN CLICKED
-      if (val.id == picID) {
-        return val;
-      }
-    // NEED TO CREATE CONTEXT AND PUSH IT TO DETAILSPAGE COMPONENT
-
-    })
-
-  }
-
   function hasJson(data) {
     try {
       JSON.parse(data);
@@ -50,7 +43,9 @@ export default function SearchPhotos() {
     hasContend = true;
   };
 
+
   return (
+
     <>
       <div className="inputContainer">
         <div>
@@ -99,21 +94,24 @@ export default function SearchPhotos() {
             return val;
           }
         }).map((pic) => (
-          <div className="card" key={pic.id} onClick={() => goDetails(pic.id)} >
-            <img
-              className="card--image"
-              alt={pic.alt_description}
-              src={pic.urls.full}
-              width="50%"
-              height="50%"
-            ></img>
+          <div className="card" key={pic.id} >
+            <Link to={{pathname: "/details", state: { image: pic}}} >
+              <img
+                className="card--image"
+                alt={pic.alt_description}
+                src={pic.urls.full}
+                width="90%"
+                height="90%"
+
+              ></img>
+            </Link>
           </div>
-        ))
+      ))
 
       }
 
-        {" "}
-      </div>
+      {" "}
+    </div>
     </>
   );
 }
