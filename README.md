@@ -12,7 +12,9 @@ Demo for Unsplash API, photo search and filter app.
 
 *Create Mock-Up
 
-*Use Postman to understand required structure for Unsplash-- (Research show that no need for Reach Route because unsplash has its own service)
+*Use Postman to understand required query structure for Unsplash-- 
+
+(Research show that no need for Reach Route because unsplash has its own service)
 
 ------------------
 --EVALUATION--
